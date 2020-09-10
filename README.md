@@ -1,2 +1,2 @@
-# VO_ILK
-Visual Odometry Iterative Lucas Kanade - OpenCV(Python)
+# Visual Odometry Iterative Lucas Kanade - OpenCV(Python)
+
