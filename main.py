@@ -125,11 +125,11 @@ if __name__ == "__main__":
     params['k1'], params['k2'], params['p1'], params['p2'], params['k3'] = 0.0,0.0,0.0,0.0,0.0
     
     cam = CameraModel(params)
-    vo = VO(cam, '*** path to ground truth pose data ***')
+    vo = VO(cam, '/home/yogesh/monoVO-python/data_odometry_poses/dataset/poses/00.txt')
     traj = np.zeros((600,600,3), dtype=np.uint8)
 
     for img_no in range(4541):
-        img = cv2.imread('*** path to image sequence ***'+str(img_no).zfill(6)+'.png', 0)
+        img = cv2.imread('/home/yogesh/monoVO-python/data_odometry_gray/dataset/sequences/00/image_0/'+str(img_no).zfill(6)+'.png', 0)
         
         vo.update_stage(img, img_no)
         trans = vo.trans
